@@ -41,7 +41,7 @@ public class UsuarioDAO {
             pst.setString(6, u.getSexo() + "");
             pst.setString(7, u.getRg());
             pst.setString(8, u.getEndereco());
-            pst.setString(9, u.getSenha());
+            pst.setString(9, u.getHashSenha());
             pst.setInt(10, u.getTipoAcesso());
             
             pst.execute(); //Executando a query e realizando a inserção no banco de dados.

@@ -5,14 +5,16 @@
  */
 package alpha.pi4.petshop.modelos;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  *
  * @author Dud Felipe
  */
-public class Usuario {
+public class Usuario implements Serializable{
     private int id;
     private String nome;
     private Date dtNascimento;
@@ -22,6 +24,7 @@ public class Usuario {
     private String email;
     private String endereco;
     private String senha;
+    private String hashSenha;
     
     /**
      * tipoAcesso = 1 -> Acesso de Cliente
@@ -127,9 +130,22 @@ public class Usuario {
     }
 
     public void setSenha(String senha) {
-        this.senha = senha;
+        //this.senha = senha;
+        this.hashSenha = BCrypt.hashpw(senha, BCrypt.gensalt());
+    }
+    
+    public boolean validarSenha(String senhaAberta) {
+        return BCrypt.checkpw(senhaAberta, hashSenha);
     }
 
+    public String getHashSenha() {
+        return hashSenha;
+    }
+
+    public void setHashSenha(String senha) {
+        this.hashSenha = senha;
+    }
+    
     public int getTipoAcesso() {
         return tipoAcesso;
     }
