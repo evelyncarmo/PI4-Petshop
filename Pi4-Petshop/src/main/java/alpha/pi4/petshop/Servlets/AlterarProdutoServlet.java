@@ -5,6 +5,8 @@
  */
 package alpha.pi4.petshop.Servlets;
 
+import alpha.pi4.petshop.BLL.ProdutoBLL;
+import alpha.pi4.petshop.modelos.Produto;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
@@ -76,7 +78,7 @@ public class AlterarProdutoServlet extends HttpServlet {
                 p.setQuantidade(Integer.parseInt(request.getParameter("quantidade")));
                 p.setModelo(request.getParameter("modelo"));
                 p.setCodBarras(request.getParameter("codbarras"));
-                p.setFilial(FilialDAO.obterFilial(Integer.parseInt(request.getParameter("filial"))));
+              //  p.setFilial(FilialDAO.obterFilial(Integer.parseInt(request.getParameter("filial"))));
 
             
             //Depois de armazenar os novos dados do cliente, é chamado o método de validação alterar().
