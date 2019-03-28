@@ -9,6 +9,7 @@ import alpha.pi4.petshop.Utils.ConnectionUtils;
 import alpha.pi4.petshop.modelos.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
@@ -45,6 +46,50 @@ public class UsuarioDAO {
             pst.setInt(10, u.getTipoAcesso());
             
             pst.execute(); //Executando a query e realizando a inserção no banco de dados.
+        }
+        finally{
+            if(pst != null && !pst.isClosed())
+                pst.close(); //Caso o preparedStatement não esteja nullo e nem fechado, estamos fechando agora no final.
+            
+            if(conn != null && !conn.isClosed())
+                conn.close(); //Mesma coisa para a conexão
+        }
+    }
+    
+    public static Usuario obterUsuario(String email) throws SQLException, Exception{
+        String sql = "SELECT * FROM usuario WHERE email = ?";
+        
+        Connection conn = null;
+        PreparedStatement pst = null;
+        
+        try{
+            conn = ConnectionUtils.getConnection(); //Realiza a conexão com o banco de dados
+            pst = conn.prepareStatement(sql); //Cria o PreparedStatement para que seja possível definir os parâmetros do INSERT
+            
+            //Preparando todos os parâmetros do método INSERT na ordem em que foram definidos na query
+            pst.setString(1, email);
+            
+            ResultSet rs = pst.executeQuery();
+            
+            if(rs.next()){
+                Usuario u = new Usuario();
+                
+                u.setCpf(rs.getString("cpf"));
+                u.setDtNascimento(rs.getDate("nascimento"));
+                u.setEmail(rs.getString("email"));
+                u.setEndereco(rs.getString("endereco"));
+                u.setHashSenha(rs.getString("senha"));
+                u.setId(rs.getInt("idUsuario"));
+                u.setNome(rs.getString("nome"));
+                u.setRg(rs.getString("rg"));
+                u.setSexo(rs.getString("sexo").charAt(0));
+                u.setTelefone(rs.getString("telefone"));
+                u.setTipoAcesso(rs.getInt("tipoacesso"));
+                
+                return u;
+            }
+            
+            return null;
         }
         finally{
             if(pst != null && !pst.isClosed())
