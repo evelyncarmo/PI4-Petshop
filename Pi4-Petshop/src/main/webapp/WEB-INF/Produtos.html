@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>PetShop TADES - Produtos</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="logo.png">
+                <strong></strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p style="text-align: center; color: white">Nome do Funcionário</p>
+
+                <li >
+                        <a href="vendas.html" >
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                            Vendas
+                        </a>
+                    </li>
+    
+                    <li class="active">
+                        <a href="produtos.html" >
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                            Produtos
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="servicos.html">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Serviços
+                        </a>
+                       
+                    </li>
+                    <li>
+                        <a href="pets.html">
+                            <i class="fas fa-paw">
+                            </i>
+                            Pets
+                        </a>
+                    </li>
+    
+                    <li >
+                        <a href="clientes.html" >
+                            <i class="glyphicon glyphicon-user"></i>
+                            Usuário
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="relatorio.html">
+                            <i class="glyphicon glyphicon-stats"></i>
+                            Relatórios
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-log-out"></i>
+                            Sair
+                        </a>
+                    </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <nav class="navbar navbar-default">
+                    <div style="font-size: 20px; text-align: center;">Gerenciar Produtos</div>
+                </nav>
+
+
+
+                <div style="margin-bottom: 15px;">
+                    <button type="button" class="btn btn-secondary btn-lg" id="liberacadastro">Cadastro</button>
+                    <button type="button" class="btn btn-secondary btn-lg" id="liberapesquisa">Pesquisar</button>
+                </div>
+
+            <div id="cadastro">
+
+               
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="produtos">Nome</label>
+                            <input type="text" class="form-control" id="produtos" >
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="produtos">Fabricante</label>
+                            <input type="text" class="form-control" id="produtos" >
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="produtos">Modelo</label>
+                            <input type="text" class="form-control" id="produtos" >
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="produtos">Preço</label>
+                              <input type="text" class="form-control" id="produtos">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        
+                        <div class="form-group col-md-6">
+                            <label for="produtos">Quantidade</label>
+                            <input type="text" class="form-control" id="produtos" >
+                        </div>
+
+                      
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="produtos">Cód. Barras</label>
+                            <input type="text" class="form-control" id="produtos" >
+                        </div>
+
+                  
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                        </div>
+                        <div class="form-group col-md-4 text-center">
+                            <button type="button" class="btn btn-secondary btn-lg btn-block">Cadastrar</button>
+                        </div>
+                        <div class="form-group col-md-4">
+                        </div>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+
+            <div id="pesquisa" style="display: none">
+
+                <table class="table" id="tabelaprodutos">
+                  <thead>
+                    <tr>
+                      <th scope="col"> Cód.Barras</th>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Fabricante</th>
+                      <th scope="col">Modelo</th>
+                      <th scope="col">Preço R$</th>
+                      <th scope="col">Quantidade</th>
+                      <th scope="col">Editar</th>
+                      <th scope="col">Excluir</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td scope="row">2345678</td>
+                    <td scope="row">Ração 15 kgs</th>
+                    <td>Royal Canin</td>
+                    <td>Adultos</td>
+                    <td>150,00</td>
+                    <td>20</td>
+                    <td><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
+                    <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                </tr>
+               
+          </tbody>
+      </table>
+
+
+  </div>
+        </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready( function () {
+
+        $('#tabelaprodutos').DataTable( {
+            "language": {
+                "lengthMenu": "Mostrando _MENU_ resultados por página",
+                "zeroRecords": "Nada encontrado - desculpe.",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "Não há dados para mostrar",
+                "infoFiltered": "(filtrado no total de _MAX_ resultados)",
+                "search": "Procurar: ",
+                "paginate": {
+                "first":      "Primeiro",
+                "last":       "Último",
+                "next":       "Próximo",
+                "previous":   "Anterior"
+            },
+            }
+        } );
+    } );
+
+    $("#liberacadastro").on("click", function() {
+        $("#cadastro").show();
+        $("#pesquisa").hide();
+    });
+
+    $("#liberapesquisa").on("click", function() {
+        $("#cadastro").hide();
+        $("#pesquisa").show();
+    });
+</script>
+</body>
+</html>

@@ -42,4 +42,8 @@ public class UsuarioBLL {
         //Essa classe é responsável por realizar operações no banco de dados.
         UsuarioDAO.inserir(u);
     }
+    
+    public static Usuario obterUsuario(String email) throws Exception{
+        return UsuarioDAO.obterUsuario(email);
+    }
 }
