@@ -1,0 +1,13 @@
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/Servlets/AlterarProdutoServlet.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/Servlets/ProdutoServlet.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/DAO/ProdutoDAO.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/modelos/Usuario.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/Servlets/UsuarioServlet.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/DAO/UsuarioDAO.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/Servlets/LoginServlet.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/modelos/Produto.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/Utils/ConnectionUtils.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/BLL/UsuarioBLL.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/Servlets/ExcluiProdutoServlet.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/Servlets/ListarProdutoServlet.java
+/Users/giovanebarreira/Desktop/PI4-Petshop/Pi4-Petshop/src/main/java/alpha/pi4/petshop/BLL/ProdutoBLL.java
