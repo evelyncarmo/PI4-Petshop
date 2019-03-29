@@ -28,15 +28,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ProdutoServlet", urlPatterns = {"/ProdutoServlet"})
 public class ProdutoServlet extends HttpServlet {
 
-      // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -50,18 +42,10 @@ public class ProdutoServlet extends HttpServlet {
         
         request.setAttribute("produtos",produtos);
         
-        RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/produtos.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/Produtos.jsp");
         dispatcher.forward(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -75,17 +59,7 @@ public class ProdutoServlet extends HttpServlet {
         p.setQuantidade(Integer.parseInt(request.getParameter("quantidade")));
         p.setModelo(request.getParameter("modelo"));
         p.setCodBarras(request.getParameter("codbarras"));
-        
-//        Filial f = new Filial();
-//        try {
-//            f = FilialDAO.obterFilial(Integer.parseInt(request.getParameter("filial")));
-//        } catch (SQLException ex) {
-//            Logger.getLogger(ServicoServlet.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//            
-//        p.setFilial(f);
-        
-        
+         
         try{
             ProdutoBLL.inserir(p);
             produtos = ProdutoBLL.listar("");

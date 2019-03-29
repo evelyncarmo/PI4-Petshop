@@ -14,7 +14,6 @@
     </head>
     <body>
         <div class="wrapper">
-            <jsp:include page="menu.jsp"></jsp:include>
 
             <div id="content">
                 <nav class="navbar navbar-default">
@@ -72,17 +71,6 @@
                                 <input type="text" class="form-control" id="quantidade" name="codbarras" value="${produto.codBarras}">
                             </div>
                             
-                            <div class="form-group col-md-6">
-                                <label for="preco">Filial</label>
-                                <select id="inputState" class="form-control" name="filial">
-                                    <option selected>Selecione...</option>
-                                    <option value="1" <c:if test="${produto.getFilial().getId() == 1}">selected</c:if>>São Paulo</option>
-                                    <option value="2" <c:if test="${produto.getFilial().getId() == 2}">selected</c:if>>Campina Grande</option>
-                                    <option value="3" <c:if test="${produto.getFilial().getId() == 3}">selected</c:if>>Brasília</option>
-                                    <option value="4" <c:if test="${produto.getFilial().getId() == 4}">selected</c:if>>Joinville</option>
-                                </select>
-                            </div>
-                            
                         </div>
 
                         <div class="form-row">
@@ -121,7 +109,6 @@
                                     <td><c:out value="${prod.modelo}" /></td>
                                     <td><c:out value="${prod.preco}" /></td>
                                     <td><c:out value="${prod.quantidade}" /></td>
-                                    <td><c:out value="${prod.getFilial().getCidade()}" /></td>
                                     <td><a href="${pageContext.request.contextPath}/AlterarProdutoServlet?id=${prod.idProduto}"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
                                     <td><a href="${pageContext.request.contextPath}/ExcluirProdutoServlet?id=${prod.idProduto}"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
                                 </tr>
