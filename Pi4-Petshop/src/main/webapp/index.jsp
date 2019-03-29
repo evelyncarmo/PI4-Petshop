@@ -13,14 +13,15 @@
         <title>JSP Page</title>
     </head>
     <body>
-    <c:choose>
-        <c:when test="${usuario == null}">
-            <a href="UsuarioServlet">Cadastrar</a> | <a href="LoginServlet">Entrar</a>
-        </c:when>
-            <c:otherwise>
-                <p>Olá <c:out value="${usuario.nome}"/></p> 
-                <a href="#">Sair</a>
-            </c:otherwise>
-    </c:choose>
+        <c:choose>
+            <c:when test="${usuario == null}">
+                <a href="UsuarioServlet">Cadastrar</a> | <a href="LoginServlet">Entrar</a>
+            </c:when>
+                <c:otherwise>
+                    <p>Olá <c:out value="${usuario.nome}"/></p> 
+                    <a href="#">Sair</a>
+                </c:otherwise>
+        </c:choose>
+        | <a href="ProdutoServlet">Produtos</a>
     </body>
 </html>
