@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="wrapper">
-
+            <jsp:include page="menu.jsp"></jsp:include>
             <div id="content">
                 <nav class="navbar navbar-default">
                     <div style="font-size: 20px; text-align: center;">Gerenciar Produtos</div>
@@ -96,7 +96,6 @@
                                 <th scope="col">Modelo</th>
                                 <th scope="col">Preço</th>
                                 <th scope="col">Estoque</th>
-                                <th scope="col">Filial</th>
                                 <th scope="col">Editar</th>
                                 <th scope="col">Excluir</th>
                             </tr>

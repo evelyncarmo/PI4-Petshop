@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package alpha.pi4.petshop.modelos;
+package alpha.pi4.petshop.modelos.Backoffice;
 
 import java.math.BigDecimal;
 
