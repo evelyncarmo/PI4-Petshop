@@ -22,6 +22,5 @@
                     <a href="#">Sair</a>
                 </c:otherwise>
         </c:choose>
-        | <a href="ProdutoServlet">Produtos</a>
     </body>
 </html>
