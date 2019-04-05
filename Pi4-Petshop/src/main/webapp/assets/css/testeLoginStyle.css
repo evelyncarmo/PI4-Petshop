@@ -1,0 +1,97 @@
+*{
+	color: #000000;
+}
+
+
+.box-bg{
+	background-color: #ccccccdc;
+	border: 1px solid black;
+	opacity: 0.9;
+}
+
+.image {
+	background-image: url("../images/nose.jpg");
+	background-color: #000000;
+	height: 1000px;
+	background-position: 150px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+  }
+
+
+.form-container{
+	border: 0px solid #fff;
+	padding: 70px 80px;
+	margin-top: 20vh;
+	-webkit-box-shadow: 2px 4px 18px -2px rgba(0,0,0,0.75);
+	-moz-box-shadow: 2px 4px 18px -2px rgba(0,0,0,0.75);
+	box-shadow: 2px 4px 18px -2px rgba(0,0,0,0.75);
+	border-radius: 3px;
+	margin-left: -15%;
+	margin-right: 13%
+	
+}
+
+@font-face {
+	font-family: patas;
+	src: url('../assets/Fonts/eurof55.ttf');
+ }
+
+.patas{
+	font-family: patas;
+	font-size: 25px;
+}
+
+input{
+	box-shadow: 0 0 6px #000000;
+	margin: 8px;
+}
+
+.layer{
+	background-color: rgba(248,247,216,0.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+button{
+	box-shadow: 0 0 6px #000000;
+	margin: 10px;
+}
+
+
+.logo{
+	position: relative;
+	top: -20px;
+	left: 90px;
+	size: 300px;
+
+	
+}
+
+
+.link{
+	position: relative;
+	margin: 8px;
+	left: 220px;
+	color: #000000;
+}
+
+.text{
+	text-align: center;
+}
+
+a:hover {
+	text-decoration: none; 
+	color: #fff;
+	font-style: none;
+  }
+
+  a{
+	color: #fff;
+  }
+
